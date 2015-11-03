@@ -1,0 +1,17 @@
+/* HEADER styles
+==================================================================================================== */
+header {
+	background: url('../media/header.jpg') top center no-repeat;
+	background-size: cover;
+	padding: 5% 2em 4%;
+	@include transition(padding 0.3s ease-in);
+	@media all and (min-width: 960px) {
+		padding: 5% 2em 3%;
+	}
+	h1 {
+		max-width: 500px;
+		margin: auto;
+		display: block;
+		width: 100%;
+	}
+}
