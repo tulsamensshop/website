@@ -10,5 +10,15 @@ var site = site || {};
             });
         });
 
+        // console.log('telephone--init');
+        //
+        // $(document).on('click', '.js-telephone', function(e) {
+        //     console.log('telephone');
+        //     if ( $('html').hasClass('no-touch') ){
+        //         console.log('telephone-touch');
+        //         e.preventDefault();
+        //     }
+        // });
+
     });
 })(jQuery);

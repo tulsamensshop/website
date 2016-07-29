@@ -15,24 +15,34 @@ header {
 		display: block;
 		width: 100%;
 	}
-	.mobile-phone {
-		position: absolute;
-		display: block;
-		width: 40px;
-		height: 40px;
-		top: 1em;
-		right: 1em;
-		border-radius: 20px;
-		background: $maroon;
-		line-height: 40px;
-		text-align: center;
+
+}
+
+.mobile-phone {
+	position: fixed;
+	display: block;
+	width: 40px;
+	height: 40px;
+	top: 1em;
+	right: 1em;
+	border-radius: 20px;
+	background: $maroon;
+	line-height: 40px;
+	text-align: center;
+	color: $white;
+	font-size: 1.5em;
+	z-index: 20;
+	&:hover {
+		background: darken($maroon, 5%);
 		color: $white;
-		font-size: 1.5em;
-		& .no-touch {
-			display: none;
-		}
-		@media all and (min-width: 600px) {
-			display: none;
-		}
+	}
+	span {
+		display: none;
+	}
+	& .no-touch {
+		display: none;
+	}
+	@media all and (min-width: 600px) {
+		display: none;
 	}
 }

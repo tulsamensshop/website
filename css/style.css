@@ -559,35 +559,42 @@ header {
     margin: auto;
     display: block;
     width: 100%; }
-  header .mobile-phone {
-    position: absolute;
-    display: block;
-    width: 40px;
-    height: 40px;
-    top: 1em;
-    right: 1em;
-    border-radius: 20px;
-    background: #9A1F25;
-    line-height: 40px;
-    text-align: center;
-    color: #FFF;
-    font-size: 1.5em; }
-    header .mobile-phone .no-touch {
-      display: none; }
-    @media all and (min-width: 600px) {
-      header .mobile-phone {
-        display: none; } }
+
+.mobile-phone {
+  position: fixed;
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 1em;
+  right: 1em;
+  border-radius: 20px;
+  background: #9A1F25;
+  line-height: 40px;
+  text-align: center;
+  color: #FFF;
+  font-size: 1.5em;
+  z-index: 20; }
+  .mobile-phone:hover {
+    background: #851b20;
+    color: #FFF; }
+  .mobile-phone span {
+    display: none; }
+  .mobile-phone .no-touch {
+    display: none; }
+  @media all and (min-width: 600px) {
+    .mobile-phone {
+      display: none; } }
 
 /* PAGE styles
 ==================================================================================================== */
-html,
-body {
+body,
+html {
   height: 100%; }
 
-.prices, .cancellation article,
-.staff article,
-.about article,
-.copyright article, footer section {
+.prices, .about article,
+.cancellation article,
+.copyright article,
+.staff article, footer section {
   max-width: 960px;
   padding: 0 2em;
   margin: 0 auto; }
@@ -625,16 +632,16 @@ h2.spacer {
   .prices article h2 {
     font-size: 1.5em;
     border-bottom: 1px dashed #999;
-    padding-bottom: .25em;
-    margin-bottom: .75em; }
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em; }
     .prices article h2 span {
       display: block;
       float: right; }
 
-.cancellation article blockquote,
-.staff article blockquote,
 .about article blockquote,
-.copyright article blockquote {
+.cancellation article blockquote,
+.copyright article blockquote,
+.staff article blockquote {
   color: #FFF;
   background: #333;
   font-style: italic;
@@ -645,15 +652,15 @@ h2.spacer {
   font-size: 1.5em;
   text-align: center;
   text-transform: uppercase; }
-.cancellation article p,
-.staff article p,
 .about article p,
-.copyright article p {
+.cancellation article p,
+.copyright article p,
+.staff article p {
   line-height: 1.3em; }
 
 .button {
   background: #9A1F25;
-  padding: 1em .5em;
+  padding: 1em 0.5em;
   color: #FFF;
   display: block;
   margin-bottom: 1.5em;
@@ -667,8 +674,8 @@ h2.spacer {
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in; }
   .button i {
-    margin-right: .5em; }
-  .button:hover, .button:focus {
+    margin-right: 0.5em; }
+  .button:focus, .button:hover {
     background: #70161b;
     color: #FFF;
     box-shadow: 0 5px 0 #450e11; }
@@ -680,12 +687,12 @@ h2.spacer {
 .staff article {
   padding-bottom: 0;
   margin-bottom: 0; }
-  .staff article .telephone span {
-    display: none;
-    /*@media all and (min-width: 768px) {
+  .staff article .telephone .telephone-number {
+    display: none; }
+    @media all and (min-width: 768px) {
+      .staff article .telephone .telephone-number {
         padding-top: 0.5em;
-        display: block;
-    }*/ }
+        display: block; } }
   .staff article div.half {
     margin-bottom: 3em; }
     @media all and (min-width: 768px) {
@@ -699,7 +706,7 @@ h2.spacer {
           min-height: 220px; } }
     .staff article div.half h3 {
       border-bottom: 1px dashed #999;
-      margin: 0 0 .75em;
+      margin: 0 0 0.75em;
       padding: 0 0 10px;
       font-size: 1.5em; }
 
@@ -736,6 +743,47 @@ h2.spacer {
   /* Bump up size of carousel content */
   .map-embed {
     padding-bottom: 25%; } }
+.tooltip {
+  position: relative;
+  display: block;
+  /* If you want dots under the hoverable text */
+  /* Tooltip text */ }
+  .tooltip:hover .tooltiptext {
+    visibility: visible; }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-family: "Arvo", serif;
+    padding: 10px;
+    border-radius: 6px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    margin-left: -100px;
+    font-size: 11px;
+    text-transform: none;
+    font-weight: normal;
+    font-style: italic;
+    /* Use half of the width (120/2 = 60), to center the tooltip */ }
+    .tooltip .tooltiptext::after {
+      content: " ";
+      position: absolute;
+      top: 100%;
+      /* At the bottom of the tooltip */
+      left: 50%;
+      margin-left: -10px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+      opacity: 0.6; }
+
 /* INDEX styles
 ==================================================================================================== */
 /* FOOTER styles
