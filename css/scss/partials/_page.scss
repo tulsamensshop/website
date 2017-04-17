@@ -114,7 +114,17 @@ h2.spacer {
 		@extend .clearfix;
 		padding-bottom: 0;
 		margin-bottom: 0;
+		.bio-wrapper em {
+			color: $maroonDark;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
 		.telephone {
+			em {
+				margin: 0.5em 0 0;
+				display: block;
+				line-height: 1.1em;
+			}
 			.telephone-number {
 				display: none;
 				@media all and (min-width: 768px) {
@@ -129,15 +139,24 @@ h2.spacer {
 		}
 		div.half {
 			margin-bottom: 3em;
+			@extend .clearfix;
 			@media all and (min-width: 768px) {
 				width: 45%;
 				display: block;
 				float: left;
+				margin-right: 5%;
+				// outline: 1px solid red;
 				&.right {
-					float: right;
+					margin-right: 0;
+					// float: right;
+					// clear: both;
 				}
 				.bio-wrapper {
 					min-height: 220px;
+				}
+				&:nth-child(3n){
+					clear: left;
+					// outline: 1px solid blue;
 				}
 			}
 			h3 {

@@ -90,18 +90,19 @@ a, button, input[type="submit"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
 
-.clearfix:before, .prices article h2:before, .staff article:before, footer article:before,
+.clearfix:before, .prices article h2:before, .staff article:before, .staff article div.half:before, footer article:before,
 .clearfix:after,
 .prices article h2:after,
 .staff article:after,
+.staff article div.half:after,
 footer article:after {
   content: "";
   display: table; }
 
-.clearfix:after, .prices article h2:after, .staff article:after, footer article:after {
+.clearfix:after, .prices article h2:after, .staff article:after, .staff article div.half:after, footer article:after {
   clear: both; }
 
-.clearfix, .prices article h2, .staff article, footer article {
+.clearfix, .prices article h2, .staff article, .staff article div.half, footer article {
   *zoom: 1; }
 
 .hide {
@@ -565,7 +566,7 @@ header {
   display: block;
   width: 40px;
   height: 40px;
-  top: 1em;
+  bottom: 1em;
   right: 1em;
   border-radius: 20px;
   background: #9A1F25;
@@ -573,7 +574,8 @@ header {
   text-align: center;
   color: #FFF;
   font-size: 1.5em;
-  z-index: 20; }
+  z-index: 20;
+  box-shadow: 0 0 15px #FFF; }
   .mobile-phone:hover {
     background: #851b20;
     color: #FFF; }
@@ -687,6 +689,14 @@ h2.spacer {
 .staff article {
   padding-bottom: 0;
   margin-bottom: 0; }
+  .staff article .bio-wrapper em {
+    color: #70161b;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .staff article .telephone em {
+    margin: 0.5em 0 0;
+    display: block;
+    line-height: 1.1em; }
   .staff article .telephone .telephone-number {
     display: none; }
     @media all and (min-width: 768px) {
@@ -699,11 +709,14 @@ h2.spacer {
       .staff article div.half {
         width: 45%;
         display: block;
-        float: left; }
+        float: left;
+        margin-right: 5%; }
         .staff article div.half.right {
-          float: right; }
+          margin-right: 0; }
         .staff article div.half .bio-wrapper {
-          min-height: 220px; } }
+          min-height: 220px; }
+        .staff article div.half:nth-child(3n) {
+          clear: left; } }
     .staff article div.half h3 {
       border-bottom: 1px dashed #999;
       margin: 0 0 0.75em;
