@@ -575,7 +575,7 @@ header {
   color: #FFF;
   font-size: 1.5em;
   z-index: 20;
-  box-shadow: 0 0 15px #FFF; }
+  box-shadow: 0 0 8px #555; }
   .mobile-phone:hover {
     background: #851b20;
     color: #FFF; }
