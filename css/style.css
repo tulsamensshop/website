@@ -544,8 +544,7 @@ body.debug:before {
 /* HEADER styles
 ==================================================================================================== */
 header {
-  background: url("../media/header.jpg") top center no-repeat;
-  background-size: cover;
+  background: #333333;
   padding: 5% 2em 4%;
   position: relative;
   -moz-transition: padding 0.3s ease-in;
