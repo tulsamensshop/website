@@ -5,3 +5,5 @@ Homestead.yaml
 
 /resources/.temp
 icon?
+.codekit-cache
+.sass-cache
