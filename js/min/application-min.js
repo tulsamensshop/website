@@ -1,1 +1,0 @@
-var site=site||{};!function($){$(function(){$(document).on("click touchstart",".back-to-top",function(t){t.preventDefault(),$("html, body").animate({scrollTop:0},"slow",function(){})})})}(jQuery);

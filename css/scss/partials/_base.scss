@@ -2,11 +2,17 @@
 // Setup your baseline, selection and links
 // ====================================================================================================
 
-
 $open-sans: 'Open Sans', sans-serif;
 $arvo: 'Arvo', serif;
 
-$maroon: #9A1F25;
+$tan: #DFC7A8;
+$blue: #548EA6;
+$blueDark: darken($blue, 10%);
+$blueDarker: darken($blue, 15%);
+$blueDarkest: darken($blue, 20%);
+
+
+$maroon: $tan;
 $maroonDark: darken($maroon, 10%);
 $maroonDarker: darken($maroon, 15%);
 $maroonDarkest: darken($maroon, 20%);
