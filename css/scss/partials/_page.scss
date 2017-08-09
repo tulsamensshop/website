@@ -69,17 +69,21 @@ h2.spacer {
 	article {
 		@extend %page-wrapper;
 		blockquote {
-			color: $white;
-			background: #333;
+			color: #444;
+			background: #EEE;
 			// color: $maroon;
 			font-style: italic;
-			line-height: 1.25em;
+			line-height: 1.2em;
 			margin: 1em auto;
-			max-width: 400px;
-			padding: 20px;
-			font-size: 1.5em;
-			text-align: center;
-			text-transform: uppercase;
+			max-width: 600px;
+			padding: 1em;
+			font-size: 1.4em;
+			text-align: left;
+			// text-transform: uppercase;
+			@media all and (min-width: 768px) {
+				padding: 1em 2em;
+				margin: 1.5em auto;
+			}
 		}
 		p {
 			line-height: 1.3em;

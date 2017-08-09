@@ -292,7 +292,8 @@ h2.spacer { text-align: center; padding: 1em; color: #548EA6; font-family: "Arvo
 .prices article h2 { font-size: 1.25em; border-bottom: 1px dashed #999; padding-bottom: 0.25em; margin-bottom: 0.75em; }
 .prices article h2 span { display: block; float: right; }
 
-.about article blockquote, .cancellation article blockquote, .copyright article blockquote, .staff article blockquote { color: #FFF; background: #333; font-style: italic; line-height: 1.25em; margin: 1em auto; max-width: 400px; padding: 20px; font-size: 1.5em; text-align: center; text-transform: uppercase; }
+.about article blockquote, .cancellation article blockquote, .copyright article blockquote, .staff article blockquote { color: #444; background: #EEE; font-style: italic; line-height: 1.2em; margin: 1em auto; max-width: 600px; padding: 1em; font-size: 1.4em; text-align: left; }
+@media all and (min-width: 768px) { .about article blockquote, .cancellation article blockquote, .copyright article blockquote, .staff article blockquote { padding: 1em 2em; margin: 1.5em auto; } }
 .about article p, .cancellation article p, .copyright article p, .staff article p { line-height: 1.3em; }
 
 .button { background: #548EA6; padding: 1em 0.5em; color: #FFF; display: block; margin-bottom: 1.5em; text-align: center; font-weight: bold; box-shadow: 0 5px 0 #437184; text-transform: uppercase; letter-spacing: 1px; -moz-transition: all 0.3s ease-in; -o-transition: all 0.3s ease-in; -webkit-transition: all 0.3s ease-in; transition: all 0.3s ease-in; }
